@@ -72,7 +72,16 @@ img {
 
 .link {
     text-decoration: none;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: var(--transition-time);
+    transition-duration: var(--transition-time);
+    -webkit-transition-timing-function: var(--cubic);
+    transition-timing-function: var(--cubic);
 }
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -763,18 +772,27 @@ a {
 
 .subscribe-wrapper {
     margin-top: 72px;
-    width: 100%;
+    
+
 }
 .subscribe-title {
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: .02em;
     color: var(--white);
     text-align: center;
+    display: flex;
+
 }
 .subscribe-form {
     margin-top: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
 }
+
 .subscribe-input {
     width: 100%;
     height: 40px;
@@ -791,8 +809,8 @@ a {
 .subscribe-btn {
     width: 165px;
     height: 40px;
-    margin-top: 16px;
-    margin-left: auto;
+
+    margin-left: 24px;
     margin-right: auto;
     padding: 8px 24px;
     font-weight: 500;
@@ -1077,17 +1095,6 @@ a {
 .private-policy-link {
     position: relative;
     color: #4d5ae5;
-}
-.link {
-    text-decoration: none;
-    line-height: 1.5;
-    letter-spacing: .02em;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: var(--transition-time);
-    transition-duration: var(--transition-time);
-    -webkit-transition-timing-function: var(--cubic);
-    transition-timing-function: var(--cubic);
 }
 
 
