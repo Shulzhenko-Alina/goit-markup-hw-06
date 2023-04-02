@@ -768,37 +768,59 @@ a {
 .subscribe-title {
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.2em;
+    letter-spacing: .02em;
     color: var(--white);
     text-align: center;
 }
-
 .subscribe-form {
     margin-top: 16px;
 }
-element.style {
-    vertical-align: inherit;
+.subscribe-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0);
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,.3);
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
 }
-.subscribe-btn{
-    padding: 8px 24px;
-    min-width: 77px;
-    min-height: 24px;
+.subscribe-btn {
+    width: 165px;
+    height: 40px;
+    margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
+    padding: 8px 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: .04em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    font-size: 16px;
-    gap: 16px;
-    color: #fff;
     border: none;
-    background: var(--iris);
+    color: var(--white);
     border-radius: 4px;
-    -webkit-box-shadow: 0px 4px 4px rgba(0,0,0,.15);
-    box-shadow: 0px 4px 4px rgba(0,0,0,.15);
+    background: var(--iris);
     -webkit-transition-property: background-color;
     transition-property: background-color;
-    -webkit-transition-duration: 250ms;;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-duration: var(--transition-time);
+    transition-duration: var(--transition-time);
+    -webkit-transition-timing-function: var(--cubic);
+    transition-timing-function: var(--cubic);
+}
+.subscribe-btn-icon {
+    margin-left: auto;
+    fill: var(--white);
 }
 
 
@@ -937,6 +959,8 @@ element.style {
     transition-property: fill,background-color,box-shadow,-webkit-box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
+
+    
 }
 .button-modal {
     padding: 16px 32px;
@@ -962,12 +986,8 @@ element.style {
 .comment-box {
     margin-bottom: 16px;
 }
-.check-box {
-    margin-bottom: 24px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
+
+
 .modal-message{
     width: 100%;
     height: 120px;
@@ -990,27 +1010,85 @@ element.style {
 
 
 
+
+
+
+
+
+
+.check-box {
+    margin-bottom: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.checkbox-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.private-policy-check:checked+.checkbox-icon {
+    border-color: rgba(0,0,0,0);
+    background-color: #404bbf;
+    fill: #f4f4fd;
+}
+
+.checkbox-icon {
+    width: 16px;
+    height: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1.25px solid #2e2f42;
+    border-radius: 2px;
+    fill: none;
+    cursor: pointer;
+    -webkit-transition-property: fill,background-color,-webkit-box-shadow;
+    transition-property: fill,background-color,-webkit-box-shadow;
+    transition-property: fill,background-color,box-shadow;
+    transition-property: fill,background-color,box-shadow,-webkit-box-shadow;
+    -webkit-transition-duration: var(--transition-time);
+    transition-duration: var(--transition-time);
+    -webkit-transition-timing-function: var(--cubic);
+    transition-timing-function: var(--cubic);
+}
 .private-policy-label {
     margin-left: 8px;
+}
+.private-policy-label {
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: .04em;
     color: #757575;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.private-policy-link {
+    position: relative;
+    color: #4d5ae5;
+}
+.link {
+    text-decoration: none;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: var(--transition-time);
+    transition-duration: var(--transition-time);
+    -webkit-transition-timing-function: var(--cubic);
+    transition-timing-function: var(--cubic);
+}
 
 
 
